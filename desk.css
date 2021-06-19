@@ -1,0 +1,149 @@
+/*CONFIGURAÇÃO PADRÃO*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*Neste caso vamos criar no root duas variaveis, para isso devemos colocar 2 traços e o nome da variavel.*/
+:root {
+  font-size: 12px;
+  font-family: "Manrope", sans-serif;
+  /*variaveis*/
+  --color-one: #ebf3fa;
+  --color-two: #49556b;
+}
+/*para chamar as variaveis usamos o metodo var();*/
+body {
+  background-color: var(--color-one);
+}
+
+/*configurações da nossa primeria caixa*/
+
+#card-container {
+  width: 63%;
+  display: flex;
+  border-radius: 12px;
+  margin: 10% auto;
+  background-color: white;
+}
+
+#card-container p {
+  opacity: .6;
+}
+
+/* CONFIGURAÇÃO DA 2 CAIXA CONTAINER E O IMG */
+
+#card-container #container-img {
+  width: 39%;
+}
+
+#card-container #container-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 0px 0px 12px;
+}
+/* CONFIRAÇÃO DA 3 CAIXA DAS INFORMAÇÕES */
+#card-container #card-info {
+  width: 63%;
+  padding: 5%;
+}
+
+#card-container #card-info h1 {
+  margin-bottom: 3%;
+}
+#card-container #card-info p {
+  font-size: 1.3rem;
+  margin-bottom: 3%;
+}
+
+/* CONFIGURAÇÕES DO MEU RODAPÉ */
+#card-footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+#card-footer #perfil {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .8rem;
+}
+#card-footer #perfil #perfil-foto{
+  width:30%;
+}
+
+
+#card-footer #perfil #perfil-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(.8);
+  /* embora o border-radius: 50%; funcione neste caso usaremos o clip para deixar a minha foto de perfil um "circulo" */
+  clip-path: circle();
+}
+
+/* AQUI TEREMOS AS CONFIGURAÇÕES FINAIS DO MEU CARD FOOTER */
+
+#card-footer #sociais, #card-footer #btn-share {
+  margin: auto 0%;
+  color: var(--color-two);
+  padding: 5%;
+  transition: .5s;
+}
+
+#card-footer #btn-share {
+  clip-path: circle(30%);
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  background-color:var(--color-one);
+}
+
+#card-footer #btn-share:hover {
+  background-color: var(--color-two);
+  color: white;
+  cursor: pointer;
+}
+
+#card-footer #sociais {
+  position: absolute;
+  right: -25%;
+  transform: translateX(-25%);
+  top: -80%;
+  opacity: 0;
+  border-radius: 10px;
+  width: 40%;
+  z-index: -1;
+}
+
+#card-footer #sociais #seta {
+  content: '';
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-tow);
+  color: var(--color-two);
+  z-index: 1;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  width: 10%;
+}
+/* AO CLICAR NO SHARE VAI APARECER AS REDES SOCIAIS */
+#card-footer #btn-share:focus ~ #sociais{
+    opacity: 1;
+    background-color:var(--color-two);
+    color:white;
+    z-index: 10;
+}
+
+#card-footer #sociais i{
+    margin: 0 3% 0 3%;
+    cursor: pointer;
+}
+#card-footer #sociais span{
+    letter-spacing: 5px;
+}

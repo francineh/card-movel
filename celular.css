@@ -1,0 +1,99 @@
+@media(max-width:450px){
+
+:root{
+    font-size:6.7px;
+}
+
+/* configurações da primeira caixa */
+
+#card-container{
+    flex-direction: column;
+    position: relative;
+}
+/* caixa da foto principal */
+
+#card-container #container-img{
+    width:100%;
+}
+#card-container #container-img img{
+    border-radius: 0;
+}
+/* container das informações  */
+
+#card-container #card-info{
+    width:100%;
+    padding:10% 10% 2% 10%;
+}
+
+#card-container #card-info p{
+    margin-bottom: 8%;
+    /* line-height: 20px; */
+    font-size:1.5rem;
+}
+
+/* informações do meu footer */
+
+#card-footer #btn-share i{
+transform: scale(.6);
+}
+/* MEU FOOTER PROPRIAMENTE DITO */
+#card-footer {
+    position: inherit;
+}
+
+#card-footer #perfil{
+    width:70%;
+}
+#card-footer #perfil #infos p,h2{
+   font-size:1.3rem ;
+}
+
+#card-footer #sociais{
+    position: absolute;
+    transform: translateX(0%);
+
+    right: 0;
+    top:90%;
+    bottom: 0;
+
+    width:100%;
+
+    border-radius: 0 0 8px 8px;
+
+    display:flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size:1.7rem;
+}
+
+#card-footer #sociais span {
+    font-weight:200 !important;
+}
+
+#card-footer #socias #seta{
+    display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
